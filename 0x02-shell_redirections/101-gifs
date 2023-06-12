@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1v -d ./**/*.gif|rev|cut -f 2- -d '.'|rev|uniq
+find . -type f -name "*.gif" -exec sh -c 'printf "%s\n" "${0%.*}"' {} \; | LC_ALL=C sort -f
