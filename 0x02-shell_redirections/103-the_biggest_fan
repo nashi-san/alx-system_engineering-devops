@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -f 1 <logfile> | sort | uniq -c | sort -nr | head -n 11
+cut -f1 < /path/to/log/file.log | sort | uniq -c | sort -rn | head -n11
