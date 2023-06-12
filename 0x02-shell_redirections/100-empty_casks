@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -empty -o -type d -empty -print | cut -c 3-
+find . \( -type f \( -empty -o -name ".*" \) \) -o \( -type d \( -empty -o -name ".*" \) \) -exec basename {} \; | sort
