@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1v -d ./**/*.gif | rev | cut -f 2- -d '.' | rev | uniq
+ls -1v -d ./*/*.gif | rev | cut -f 2- -d '.' | rev | uniq
