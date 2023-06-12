@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -f 1 "$1" | sort | uniq | xargs -I{} sh -c 'hostname=$(dig +short -x "{}"); if [ -n "$hostname" ]; then echo "$hostname"; else echo "{}"; fi;' | sort | uniq -c | sort -rn | head -n 11 | awk '{print $2}'
+cut -f 1 "$1" | sort | uniq | sort -rn | head -n 11 | cut -f 1
