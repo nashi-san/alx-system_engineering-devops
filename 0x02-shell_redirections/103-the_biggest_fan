@@ -1,2 +1,2 @@
 #!/bin/bash
-/usr/bin/cut -f 1 "$1" | /usr/bin/sort | /usr/bin/uniq -c | /usr/bin/sort -rn | /usr/bin/head -n 11 | /usr/bin/tr -s ' ' | /bin/cut -d ' ' -f 3
+/bin/cut -f 1 "$1" | /usr/bin/sort | /usr/bin/uniq -c | /usr/bin/sort -rn | /usr/bin/head -n 11 | /bin/cut -c 9-
