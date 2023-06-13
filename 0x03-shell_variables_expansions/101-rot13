@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $1 | tr 'N-ZA-Mn-za-m' 'A-Za-z'
+cat "$1" | tr 'N-ZA-Mn-za-m' 'A-Za-z'
