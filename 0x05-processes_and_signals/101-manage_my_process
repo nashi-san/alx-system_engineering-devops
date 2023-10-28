@@ -15,7 +15,8 @@ restart() {
   pid=$(cat /var/run/my_process.pid)
   kill "$pid"
   rm /var/run/my_process.pid
-  ./manage_my_process &>/dev/null & pid=$!             echo $pid > /var/run/my_process.pid
+  ./manage_my_process &>/dev/null & pid=$!
+  echo $pid > /var/run/my_process.pid
   echo "manage_my_process restarted"
 }
 case "$1" in
