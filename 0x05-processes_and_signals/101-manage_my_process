@@ -8,7 +8,7 @@ start() {
 stop() {
   pid=$(cat /var/run/my_process.pid)
   kill "$pid"
-  rm /var/run/my_process.pid
+  rm -rf /var/run/my_process.pid
   echo "manage_my_process stopped"
 }
 restart() {
